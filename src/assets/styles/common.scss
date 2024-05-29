@@ -1,0 +1,133 @@
+.menu {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+  transition: 0.2s ease-out;
+  &._show {
+    left: 0;
+  }
+  // .menu__wrapper
+  &__wrapper {
+    height: 100%;
+  }
+  // .menu__head
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 10px 20px 10px 10px;
+    z-index: 2;
+    &._active {
+      border-bottom: 1px solid var(--gray-300);
+      background: var(--background) !important;
+    }
+  }
+  // .menu__back
+  &__back {
+    color: var(--gray-900);
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    p {
+      padding-left: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  // .menu__close
+  &__close {
+    background-color: transparent;
+    padding: 10px;
+    color: var(--gray-900);
+  }
+  // .menu__body
+  &__body {
+    height: calc(100% - 56px);
+    overflow: auto;
+  }
+}
+
+.status {
+  margin-bottom: 5px;
+  padding: 2px 2px 2px 10px;
+  border: 1px solid var(--gray-900);
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  p {
+    flex: 1 1;
+  }
+  // .status_accepted
+  &_accepted {
+    background-color: var(--primary-100);
+    border-color: var(--primary-600);
+    color: var(--primary-600);
+  }
+  // .status_canceled
+  &_canceled {
+    background-color: var(--gray-100);
+    border-color: var(--gray-600);
+    color: var(--gray-600);
+    &.status_outline {
+      background-color: transparent;
+    }
+  }
+  // .status_return
+  &_return {
+    background-color: var(--warning-100);
+    border-color: var(--warning-600);
+    color: var(--warning-600);
+    &.status_outline {
+      background-color: transparent;
+    }
+  }
+  // .status_sending
+  &_sending {
+    background-color: var(--info-100);
+    border-color: var(--info-600);
+    color: var(--info-600);
+    &.status_outline {
+      background-color: transparent;
+    }
+  }
+  // .status_success
+  &_success {
+    background-color: var(--success-100);
+    border-color: var(--success-600);
+    color: var(--success-600);
+    &.status_outline {
+      background-color: transparent;
+    }
+  }
+
+  // .status_danger
+  &_danger {
+    background-color: var(--danger-100);
+    border-color: var(--danger-600);
+    color: var(--danger-600);
+    &.status_outline {
+      background-color: transparent;
+    }
+  }
+  span {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 4px;
+    background-color: var(--gray-600);
+    color: var(--gray-100);
+    border-radius: 20px;
+    min-width: 20px;
+    text-align: center;
+    margin-left: 5px;
+  }
+}
